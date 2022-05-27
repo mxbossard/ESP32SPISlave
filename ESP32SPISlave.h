@@ -45,8 +45,11 @@ class Slave {
         .mosi_io_num = 13,  // HSPI
         .miso_io_num = 12,  // HSPI
         .sclk_io_num = 14,  // HSPI
+        .quadwp_io_num = -1,
+        .quadhd_io_num = -1,
         .max_transfer_sz = SOC_SPI_MAXIMUM_BUFFER_SIZE,
         .flags = SPICOMMON_BUSFLAG_SLAVE,
+        .intr_flags = 0,
     };
 
     spi_host_device_t host {HSPI_HOST};
